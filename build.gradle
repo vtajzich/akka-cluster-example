@@ -1,0 +1,28 @@
+allprojects {
+
+    apply plugin: 'java'
+    apply plugin: 'groovy'
+    apply plugin: 'maven'
+
+    sourceCompatibility = 1.7
+    version = '1.0'
+
+    repositories {
+        mavenLocal()
+        mavenCentral()
+    }
+
+    dependencies {
+
+        compile 'org.codehaus.groovy:groovy-all:2.2.1'
+
+        compile 'com.typesafe.akka:akka-actor_2.10:2.2.3'
+        compile 'com.typesafe.akka:akka-remote_2.10:2.2.3'
+        compile 'com.typesafe.akka:akka-slf4j_2.10:2.2.3'
+        compile 'com.typesafe.akka:akka-contrib_2.10:2.2.3'
+        compile 'com.typesafe.akka:akka-testkit_2.10:2.2.3'
+        compile 'com.typesafe.akka:akka-cluster_2.10:2.2.3'
+
+        testCompile group: 'junit', name: 'junit', version: '4.11'
+    }
+}

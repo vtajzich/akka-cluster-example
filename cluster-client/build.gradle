@@ -1,0 +1,6 @@
+apply plugin: 'application'
+mainClassName = "net.tajzich.akka.cluster.MainClusterClient"
+
+dependencies {
+    compile project(':cluster-common')
+}
