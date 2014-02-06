@@ -11,7 +11,7 @@ class Calculator extends UntypedActor {
     @Override
     void onReceive(Object message) throws Exception {
 
-        println "Calculator received some message!"
+        println "Calculator received some message! [$message]"
 
         if (message instanceof Calculate) {
 
