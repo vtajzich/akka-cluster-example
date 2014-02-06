@@ -1,14 +1,11 @@
 # Akka Cluster example in groovy / java
-***
 
 ## Overwiev
-***
 
 It shows how to create an *Akka* cluster in groovy / java. You can start unlimited number of server nodes and clients. However you need at least 2 seed server nodes (see below how to start them).
 
 It’s configured to run on *localhost* by default. If you want to test it over network just setup IP addresses / names correctly in *application.conf* and *MainClusterClient* (there is config string ;) ). Do not forget to turn off firewalls or open needed ports (e.g. 2551 and 2552 for seed nodes).
 
-***
 ## Modules
 
 1. cluster-common - contains actors and messages
@@ -16,13 +13,13 @@ It’s configured to run on *localhost* by default. If you want to test it over 
 3. cluster-client - connects to server
 
 # How to build
-***
+
 You need gradle in version 1.10 and Java 7
 Run
 > gradle build
 
 # How to run
-***
+
 Each server and client part can be run multiple times to simulate multiple server nodes in cluster and clients.
 
 ## How to run server
@@ -46,7 +43,7 @@ To run more work nodes just type
 * Set the node to greeter type. It means it will react only to *Greating* messages. Without *nodeType* parameter it will be set to calculator type (*Calculate* messages).
 > -PnodeType=greeter
 
-***
+
 ## How to run client
 
 Go to folder cluster-client and run
