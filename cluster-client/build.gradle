@@ -4,3 +4,9 @@ mainClassName = "net.tajzich.akka.cluster.MainClusterClient"
 dependencies {
     compile project(':cluster-common')
 }
+
+if(!hasProperty('clientType')) {
+    project.ext.clientType = 'calculator'
+}
+
+project.tasks.run.args = [project.ext.clientType]

@@ -1,1 +1,1 @@
-include 'cluster-common', 'cluster-master', 'cluster-node', 'cluster-client'
+include 'cluster-common', 'cluster-master', 'cluster-client'

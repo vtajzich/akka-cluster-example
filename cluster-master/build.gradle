@@ -13,4 +13,8 @@ if(hasProperty('master')) {
     project.ext.port = 0
 }
 
-project.tasks.run.args = [project.ext.port]
+if(!hasProperty('nodeType')) {
+    project.ext.nodeType = 'calculator'
+}
+
+project.tasks.run.args = [project.ext.port, project.ext.nodeType]
