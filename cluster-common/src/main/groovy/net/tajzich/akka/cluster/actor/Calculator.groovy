@@ -1,12 +1,11 @@
 package net.tajzich.akka.cluster.actor
-
 import akka.actor.UntypedActor
 import net.tajzich.akka.cluster.message.Calculate
-
 /**
  * Created by vtajzich on 29/01/14.
  */
 class Calculator extends UntypedActor {
+
 
     @Override
     void onReceive(Object message) throws Exception {
@@ -19,9 +18,9 @@ class Calculator extends UntypedActor {
 
             def result = calculate.left + calculate.right
 
-            println "Caculated results: $result from: ${sender}"
+            println "Caculated results: $result from: ${sender}}"
 
-//            sender.tell(result, self)
+            sender.tell(result, self)
 
         } else {
             unhandled(message)

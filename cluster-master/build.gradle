@@ -4,3 +4,13 @@ mainClassName = "net.tajzich.akka.cluster.MainClusterMaster"
 dependencies {
     compile project(':cluster-common')
 }
+
+if(hasProperty('master')) {
+    project.ext.port = 2551
+}else if(hasProperty('slave')) {
+    project.ext.port = 2552
+} else {
+    project.ext.port = 0
+}
+
+project.tasks.run.args = [project.ext.port]
